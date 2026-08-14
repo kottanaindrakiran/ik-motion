@@ -7,7 +7,8 @@ exceeds Gmail's 25 MB limit). Emailing is best-effort per item: one failure is
 logged and the rest still go out.
 
 Env:
-  GMAIL_APP_PASSWORD  (required)  — Gmail App Password for the sender account
+  GMAIL_ADDRESS       (required)  — Gmail account to log in / send from
+  GMAIL_APP_PASSWORD  (required)  — Gmail App Password for that account
   RUN_URL             (optional)  — link to the GitHub Actions run/artifacts
   MAIL_FROM / MAIL_TO (optional)  — override sender/recipient
 """
@@ -25,7 +26,6 @@ MANIFEST = ROOT / "output" / "batch" / "manifest.json"
 
 SMTP_HOST = "smtp.gmail.com"
 SMTP_PORT = 465
-ACCOUNT = "kottanaindrakiran@gmail.com"
 MAX_ATTACH = 24 * 1024 * 1024  # stay safely under Gmail's 25 MB limit
 
 
@@ -58,8 +58,11 @@ def main():
     password = os.getenv("GMAIL_APP_PASSWORD")
     if not password:
         sys.exit("GMAIL_APP_PASSWORD missing.")
-    sender = os.getenv("MAIL_FROM", ACCOUNT)
-    recipient = os.getenv("MAIL_TO", ACCOUNT)
+    account = os.getenv("GMAIL_ADDRESS")
+    if not account:
+        sys.exit("GMAIL_ADDRESS missing.")
+    sender = os.getenv("MAIL_FROM", account)
+    recipient = os.getenv("MAIL_TO", account)
     run_url = os.getenv("RUN_URL", "")
 
     if not MANIFEST.exists():
@@ -73,7 +76,7 @@ def main():
     context = ssl.create_default_context()
     sent = 0
     with smtplib.SMTP_SSL(SMTP_HOST, SMTP_PORT, context=context) as server:
-        server.login(ACCOUNT, password)
+        server.login(account, password)
         for rec in ready:
             try:
                 title, body = build_body(rec, run_url)
