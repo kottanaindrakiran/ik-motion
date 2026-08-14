@@ -1,0 +1,63 @@
+{
+  "topic": "Sample: Why Cities Are Ovens",
+  "fps": 30,
+  "format": { "width": 1920, "height": 1080 },
+  "palette": "vox",
+  "audio": { "narration": null },
+  "totalDuration": 23.5,
+  "scenes": [
+    {
+      "type": "title_card",
+      "narration_text": "Cities are getting hotter, and it is not just climate change.",
+      "key_data": { "title": "Why Cities Are Ovens" },
+      "start": 0,
+      "duration": 4
+    },
+    {
+      "type": "stat_reveal",
+      "narration_text": "Urban centers can run up to seven degrees hotter than the countryside.",
+      "key_data": { "stat": "7°C", "label": "hotter than surrounding rural areas" },
+      "start": 4,
+      "duration": 4
+    },
+    {
+      "type": "icon_list",
+      "narration_text": "Asphalt absorbs heat. Buildings block wind. Machines pump out waste heat.",
+      "key_data": {
+        "items": [
+          { "icon": "Car", "text": "Asphalt absorbs heat" },
+          { "icon": "Building2", "text": "Buildings block wind" },
+          { "icon": "Thermometer", "text": "Machines pump waste heat" }
+        ]
+      },
+      "start": 8,
+      "duration": 5
+    },
+    {
+      "type": "chart",
+      "narration_text": "Extreme heat days in major cities have more than doubled since the eighties.",
+      "key_data": {
+        "title": "Extreme heat days per year",
+        "bars": [
+          { "label": "1985", "value": 8 },
+          { "label": "1995", "value": 11 },
+          { "label": "2005", "value": 14 },
+          { "label": "2015", "value": 18 },
+          { "label": "2025", "value": 21 }
+        ]
+      },
+      "start": 13,
+      "duration": 5
+    },
+    {
+      "type": "comparison",
+      "narration_text": "Painting a roof white can cut its surface temperature by thirty degrees.",
+      "key_data": {
+        "left": { "label": "Black roof", "value": "80°C" },
+        "right": { "label": "White roof", "value": "50°C" }
+      },
+      "start": 18,
+      "duration": 5
+    }
+  ]
+}

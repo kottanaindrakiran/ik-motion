@@ -1,0 +1,17 @@
+{
+  "name": "ik-motion-video",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "studio": "remotion studio",
+    "render": "remotion render src/index.jsx Main ../output/video_raw.mp4 --props=../output/props.json"
+  },
+  "dependencies": {
+    "@remotion/cli": "^4.0.226",
+    "@remotion/google-fonts": "^4.0.226",
+    "lucide-react": "^0.462.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "remotion": "^4.0.226"
+  }
+}

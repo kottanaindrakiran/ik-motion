@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>IK 30-Day Content Tracker</title>
+<style>
+  :root{--bg:#101014;--card:#1a1a21;--card2:#22222b;--txt:#fff;--dim:#9a9aa5;--yellow:#ffd400;--done:#3ddc84;}
+  *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent;}
+  body{background:var(--bg);color:var(--txt);font-family:'Inter','Segoe UI',Arial,sans-serif;padding-bottom:60px;}
+  header{padding:20px 16px 12px;position:sticky;top:0;background:var(--bg);z-index:10;border-bottom:1px solid #26262e;}
+  h1{font-size:22px;font-weight:900;}h1 span{color:var(--yellow);}
+  .sub{color:var(--dim);font-size:12px;margin-top:2px;}
+  .tabs{display:flex;gap:6px;margin-top:12px;overflow-x:auto;}
+  .tab{flex:1;min-width:74px;padding:9px 4px;border-radius:10px;background:var(--card);border:2px solid transparent;
+       color:var(--dim);font-weight:800;font-size:13px;text-align:center;cursor:pointer;white-space:nowrap;}
+  .tab.active{color:#111;border-color:transparent;}
+  .prog{height:6px;background:var(--card);border-radius:3px;margin-top:10px;overflow:hidden;}
+  .prog>div{height:100%;background:var(--yellow);width:0%;transition:width .3s;}
+  .progtxt{font-size:11px;color:var(--dim);margin-top:4px;}
+  main{padding:12px;}
+  .chnote{font-size:12px;color:var(--dim);background:var(--card);border-radius:10px;padding:10px 12px;margin-bottom:10px;line-height:1.5;}
+  .chnote b{color:var(--txt);}
+  .day{background:var(--card);border-radius:12px;margin-bottom:8px;overflow:hidden;}
+  .dhead{display:flex;align-items:center;justify-content:space-between;padding:13px 14px;cursor:pointer;user-select:none;}
+  .dhead .l{font-weight:800;font-size:15px;}
+  .dhead .l small{color:var(--dim);font-weight:600;margin-left:8px;font-size:11px;}
+  .dhead .r{font-size:12px;color:var(--dim);font-weight:700;}
+  .dhead .r.full{color:var(--done);}
+  .items{display:none;padding:0 12px 12px;}
+  .day.open .items{display:block;}
+  .item{display:flex;gap:10px;align-items:flex-start;background:var(--card2);border-radius:10px;padding:11px;margin-bottom:8px;}
+  .cb{width:26px;height:26px;min-width:26px;border-radius:8px;border:2px solid #3a3a45;background:transparent;cursor:pointer;
+      display:flex;align-items:center;justify-content:center;font-size:16px;color:transparent;margin-top:2px;}
+  .cb.on{background:var(--done);border-color:var(--done);color:#0b2b1a;}
+  .it{flex:1;}
+  .kind{font-size:10px;font-weight:800;letter-spacing:1px;color:var(--yellow);}
+  .kind.long{color:#ff7a5c;}
+  .topic{font-size:14px;font-weight:700;line-height:1.35;margin:3px 0 4px;}
+  .meta{font-size:11px;color:var(--dim);}
+  .cp{border:none;background:#2e2e39;color:var(--txt);font-size:11px;font-weight:700;border-radius:7px;padding:7px 10px;cursor:pointer;margin-top:2px;}
+  .cp:active{background:var(--yellow);color:#111;}
+  .item.done .topic{text-decoration:line-through;color:var(--dim);}
+  footer{padding:14px 16px;color:var(--dim);font-size:11px;line-height:1.6;}
+</style>
+</head>
+<body>
+<header>
+  <h1>IK<span>.</span> 30-Day Tracker</h1>
+  <div class="sub">2 Shorts daily · long video on marked days · tick when posted to YT + IG</div>
+  <div class="tabs" id="tabs"></div>
+  <div class="prog"><div id="pbar"></div></div>
+  <div class="progtxt" id="ptxt"></div>
+</header>
+<main id="main"></main>
+<footer>
+  <b style="color:#fff">Hook rule:</b> first 3 seconds decide everything — the topic titles here ARE the hooks, paste them into IK Motion as-is.
+  Shorts = 30s–1min, Portrait. Long = 3–5 min, Landscape. Tick = rendered + posted to BOTH YouTube and Instagram.
+  Progress saves on this phone automatically.
+</footer>
+<script>
+const LONG_DAYS = {4:0, 7:1, 11:2, 14:3, 18:4, 21:5, 25:6, 28:7};
+
+const CH = {
+atlas:{name:"Atlas", color:"#4cc9f0", note:"<b>IK Atlas</b> — style: <b>Midnight</b> (Archive for history topics) · voice: Andrew/Christopher",
+shorts:["Why 90% of Australians live on the edge of the country","The country that is running out of people","Why Africa is splitting into two continents","The richest country you've never heard of","Why no one can buy land in this country","The city that is sinking 25 cm every year","Why Russia is so big but so empty","The border you can walk across in 5 minutes but takes 4 hours by train","Why Japan builds islands from scratch","The country with no rivers at all","Why the Netherlands should be underwater by now","The most crowded square kilometer on Earth","Why the USA-Canada border has no guards for 8,000 km","The country that moved its capital into the jungle","How Singapore became rich with zero natural resources","The African country much richer than you think","Why nobody lives in the middle of Australia","The island owned by two countries at once","Why Egypt is building a brand new capital city","The narrow strait that controls 30% of world trade","How Norway got rich and stayed rich","The country that banned cars every Sunday and what happened","Why China built dozens of empty mega cities","The tiny country that secretly runs global banking","Why India's borders look impossible to defend","The sea that is disappearing in real time","Why Switzerland officially has no capital city","The most expensive city on Earth and why","Why deserts are suddenly full of billionaires","The country where cash is almost completely dead","Why countries on the equator tend to be poorer","The single train line that changed an entire continent","Why Dubai built islands shaped like palm trees","The most isolated big city on the planet","How South Korea grew faster than any country in history","The river that five countries are fighting over","Why Greenland is icy but Iceland is green","The country with the strangest shape in the world","Why the world's megacities are moving inland","The poorest country sitting on trillions in minerals","Why all of China runs on one single time zone","The bridge that connects two continents","Why islands keep quietly disappearing from world maps","The city built in the middle of nowhere on purpose","Why Antarctica belongs to nobody","The canal that cut world shipping time in half","Why some countries drive on the left side","The mountain border that moves position every year","Why most of the world's food comes from just five regions","The country that rents out its own army","Why airports are turning into full cities","The one line on a map that split an entire people","Why water will decide the next hundred years","The smallest country with the biggest secrets","Why cities are racing to build underground","The single port that makes or breaks Asia","Why nobody agrees how many countries exist","The desert that used to be an ocean floor","Why Iceland runs almost entirely on volcanoes","The road you could drive from Norway to South Africa"],
+longs:["Why some countries are rich and others stay poor — the full story","How Singapore went from swamp to superpower in 60 years","The real reason Africa's borders look like that","How one canal controls the world economy","Why Japan's population crisis will change everything","How Dubai built a megacity in a desert — and what it really cost","The geography that made America unstoppable","Why the next world conflict will be fought over water"]},
+
+minds:{name:"Minds", color:"#f72585", note:"<b>IK Minds</b> — style: <b>Neon</b> · voice: Aria/Neerja (female tests well in psychology)",
+shorts:["Why your brain hates starting tasks — procrastination explained","The 5-second trick your brain cannot resist","Why you remember embarrassing moments forever","How ads know you better than your own friends","Why smart people make dumb decisions","The psychology of why you can't stop scrolling","Why your brain invents faces in the dark","The trick restaurants use to make you spend more","Why deadlines magically make you faster","Why you forget someone's name in 5 seconds","Why crowds make people invisible — the bystander effect","The psychology behind lucky streaks","How your memory quietly rewrites your past","The real reason music gives you chills","Why you keep buying things you don't need","The 2-minute rule that beats procrastination","Why first impressions are almost impossible to change","Why waiting in line feels longer than it is","Why your brain is addicted to bad news","The placebo effect is stranger than you think","Why multitasking is a lie your brain tells you","Why talking to yourself actually works","Why gamblers always think they're about to win","The hidden psychology of colors in logos","Why you dream about falling","Why unfinished tasks haunt your brain — the Zeigarnik effect","Why we trust confident people even when they're wrong","The dopamine loop that secretly runs your day","Why silence feels awkward after exactly 4 seconds","The psychology of why we keep secrets","Why your brain insists the past was better","The anchoring trick shops use on every price tag","Why laughing is scientifically contagious","Why exams make you forget everything you studied","Why we secretly love watching people fail","The IKEA effect — why you love what you build","Why time flies when you're having fun — the real science","Why you can't ignore your own name across a room","Why habits beat motivation every single time","The psychology of doomscrolling at 2 AM","Why your brain fears public speaking more than death","The halo effect — why attractive people seem smarter","How writing things down physically changes your brain","Why children learn languages so much faster","Why you feel watched when nobody is there","The sunk cost trap that keeps you stuck in everything","Why your brain loves round numbers","Why nostalgia works like a painkiller","Why groups make riskier decisions than individuals","The spotlight effect — nobody notices your mistakes","Why rewards can actually kill motivation","Why you can't remember being a baby","How cliffhangers hijack your brain chemistry","The evolutionary reason we gossip","Why your brain shuts down mid-argument","Why familiarity beats quality — the mere exposure effect","Why writing a to-do list feels as good as doing it","Why stress makes food taste better","How eye contact changes a conversation's chemistry","The peak-end rule — how your brain scores every memory"],
+longs:["How social media hacks your brain — the full psychology of addiction","Why willpower fails and what actually works instead","7 psychological tricks advertisers use on you every day","The science of habits — how to rewire your brain in 30 days","Why we believe lies — the psychology of misinformation","How your childhood quietly shapes your money habits","The dark psychology of cults — how normal people get recruited","Memory explained — why you forget and how to stop it"]},
+
+space:{name:"Space", color:"#ffd400", note:"<b>IK Space</b> — style: <b>Midnight</b> · voice: Christopher (deep = space)",
+shorts:["Black holes make a sound — and we recorded it","The Moon is slowly leaving us","A day on Venus is longer than its entire year","The star that could explode in your lifetime","Why space smells like burnt steak","The planet where it rains glass sideways","Why astronauts age slower than you","The biggest known structure in the universe","Why sunsets on Mars are blue","The ocean hiding inside Saturn's moon","Why the universe itself has a temperature","The loneliest place in the universe","How Jupiter secretly protects Earth","The diamond planet twice the size of Earth","Why time stops inside a black hole","The mystery radio signal that repeats from deep space","Why astronauts come back taller","The galaxy heading straight for us right now","The Sun is white — not yellow","The coldest place in the universe is man-made","The real reason Pluto lost its planet status","The storm on Jupiter bigger than our whole planet","Why you only ever see one side of the Moon","The fastest object humans have ever built","Why space is completely silent","Zombie stars — the dead stars that refuse to die","Why Saturn would float in a bathtub","The most expensive object ever built is in orbit","Why most meteors never reach the ground","The planet that orbits two suns at once","The average color of the universe is beige","There's a hole in the universe with nothing in it","Why GPS would fail without Einstein","The moon with lakes — but not of water","Why stars twinkle but planets don't","The exploding star people saw in daylight in 1054","Black holes aren't actually holes","The asteroid worth more than the entire world economy","How the Moon really causes tides","The space probe that left the solar system forever","Why Mercury is NOT the hottest planet","It rains diamonds on Neptune","Why the space station falls forever and never lands","The star that is one giant diamond","How space junk could trap humanity on Earth","The volcano on Mars three times taller than Everest","The day the Sun will swallow Earth","Dark matter — the mystery in 60 seconds","Why light takes 100,000 years to escape the Sun","The planet where a year lasts 8 hours","Why astronauts can't cry in space","The invisible force dragging our entire galaxy","The Big Bang was not an explosion","The moon most likely to have alien life","Why rockets are 90% fuel","The star that will outlive the universe","Earth's core is as hot as the Sun's surface","The message we beamed to aliens in 1974","The universe is expanding faster every second","The last star will die in 120 trillion years"],
+longs:["Black holes explained — from birth to spaghettification","The James Webb discoveries that broke physics","What happens to your body in space without a suit","The complete story of how the Moon was made","Why we haven't found aliens — the Fermi paradox explained","The death of the Sun — a timeline of the end of everything","How rockets learned to land themselves","The scariest things in the universe, ranked"]},
+
+future:{name:"Future", color:"#3ddc84", note:"<b>IK Future</b> — style: <b>Vox</b> or Neon · voice: Andrew · facts not advice",
+shorts:["AI has learned to lie — and researchers are worried","The first jobs AI is replacing — not the ones you think","Why your next doctor might be an algorithm","The robot that taught itself to walk in one hour","Why AI still can't draw hands","The country betting its entire future on robots","Why deepfakes are becoming impossible to detect","The AI that beats doctors at reading X-rays","The real reason self-driving cars are taking so long","The chip shortage that runs world politics","Why AI companies are buying nuclear power plants","The dead internet theory explained","Why programmers are training their own replacements","The AI companion industry is exploding","Why batteries are the real technology race","The algorithm that decides what you watch tonight","Why AI can't say 'I don't know'","Inside the warehouse with zero humans","Why tech billionaires are building bunkers","The AI that reads your brain waves","Why every app suddenly wants your face","What one AI answer actually costs in electricity","Why robots still can't fold your laundry","The startup growing real meat without animals","What quietly killed the metaverse","How drone swarms are changing warfare","Why AI music is flooding streaming apps","The computer that runs on light instead of electricity","Why hackers love your smart home","The AI that discovered new antibiotics","Your data is worth $700 a year — here's who pays","Humanoid robots are entering factories right now","Why quantum computers will break every password","The app ban that changed the internet forever","How AI translation will end language barriers","The technology that can see through walls","Why computer chips are the new oil","The AI that designs better AI than humans can","How satellite internet is quietly taking over","Robot surgeons are operating on people today","Why AI watermarks don't actually work","The end of passwords is finally here","Your old phone contains actual gold","The AI that predicts earthquakes","Why big tech wants your health data so badly","Lab-grown organs are already saving lives","The AI bubble — will it burst?","Satellites are photographing you right now","Why coding is becoming a spoken language","The machines sucking carbon straight from the sky","AI agents will soon browse the internet for you","The 6G race nobody is talking about","The plan to make robots pay taxes","The AI that aced the world's hardest exams","Why screens might replace every window","Brain implants are restoring people's speech","Why AI needs to learn how to forget","The fake reviews written entirely by machines","How solar became the cheapest energy in history","What comes after the smartphone"],
+longs:["How AI actually works — explained so anyone can understand it","The AI arms race between the USA and China, explained","Will AI take your job? An honest 10-year forecast","How one chip company became the most important on Earth","The dark side of AI companions and chatbots","Brain-computer interfaces — how close are we really?","The complete story of the global chip war","What happens when AI runs out of internet to learn from"]}
+};
+
+const KEYS = Object.keys(CH);
+let cur = localStorage.getItem("ik_tab") || "atlas";
+const done = id => localStorage.getItem("ik_"+id) === "1";
+const setDone = (id,v) => localStorage.setItem("ik_"+id, v?"1":"0");
+
+function itemsForDay(ch,d){
+  const c = CH[ch], out = [
+    {id:`${ch}-${d}-0`, kind:"SHORT 1", topic:c.shorts[(d-1)*2],   meta:"30s–1min · Portrait · post YT Shorts + IG Reels"},
+    {id:`${ch}-${d}-1`, kind:"SHORT 2", topic:c.shorts[(d-1)*2+1], meta:"30s–1min · Portrait · post YT Shorts + IG Reels"}
+  ];
+  if(d in LONG_DAYS) out.push({id:`${ch}-${d}-2`, kind:"LONG VIDEO", topic:c.longs[LONG_DAYS[d]], meta:"3–5 min · Landscape · YouTube only", long:true});
+  return out;
+}
+
+function counts(ch){
+  let t=0,k=0;
+  for(let d=1;d<=30;d++) itemsForDay(ch,d).forEach(it=>{t++; if(done(it.id))k++;});
+  return [k,t];
+}
+
+function render(){
+  const tabs = document.getElementById("tabs");
+  tabs.innerHTML = KEYS.map(k=>{
+    const a = k===cur;
+    return `<div class="tab ${a?'active':''}" style="${a?`background:${CH[k].color}`:''}" onclick="switchTab('${k}')">${CH[k].name}</div>`;
+  }).join("");
+
+  const [k,t] = counts(cur);
+  document.getElementById("pbar").style.width = (t? (k/t*100):0) + "%";
+  document.getElementById("pbar").style.background = CH[cur].color;
+  document.getElementById("ptxt").textContent = `IK ${CH[cur].name}: ${k} / ${t} videos done`;
+
+  const openDay = sessionStorage.getItem("ik_open_"+cur) || "";
+  let html = `<div class="chnote">${CH[cur].note}</div>`;
+  for(let d=1;d<=30;d++){
+    const its = itemsForDay(cur,d);
+    const dk = its.filter(i=>done(i.id)).length;
+    const full = dk===its.length;
+    html += `<div class="day ${String(d)===openDay?'open':''}" id="day${d}">
+      <div class="dhead" onclick="toggle(${d})">
+        <div class="l">Day ${d}${d in LONG_DAYS?'<small>+ LONG VIDEO</small>':''}</div>
+        <div class="r ${full?'full':''}">${full?'✔ done':dk+'/'+its.length}</div>
+      </div>
+      <div class="items">` +
+      its.map(it=>`
+        <div class="item ${done(it.id)?'done':''}">
+          <div class="cb ${done(it.id)?'on':''}" onclick="tick('${it.id}')">✔</div>
+          <div class="it">
+            <div class="kind ${it.long?'long':''}">${it.kind}</div>
+            <div class="topic">${it.topic}</div>
+            <div class="meta">${it.meta}</div>
+          </div>
+          <button class="cp" onclick="copyT(this,\`${it.topic.replace(/`/g,"'")}\`)">Copy</button>
+        </div>`).join("") +
+      `</div></div>`;
+  }
+  document.getElementById("main").innerHTML = html;
+}
+
+function switchTab(k){cur=k; localStorage.setItem("ik_tab",k); render(); window.scrollTo(0,0);}
+function toggle(d){
+  const el=document.getElementById("day"+d), open=el.classList.contains("open");
+  document.querySelectorAll(".day.open").forEach(x=>x.classList.remove("open"));
+  if(!open){el.classList.add("open"); sessionStorage.setItem("ik_open_"+cur,String(d));}
+  else sessionStorage.setItem("ik_open_"+cur,"");
+}
+function tick(id){setDone(id,!done(id)); render();}
+function copyT(btn,txt){
+  navigator.clipboard.writeText(txt).then(()=>{btn.textContent="✔"; setTimeout(()=>btn.textContent="Copy",900);});
+}
+render();
+</script>
+</body>
+</html>

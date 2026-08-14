@@ -1,0 +1,55 @@
+[
+  {
+    "type": "title_card",
+    "narration_text": "Cities are getting hotter, and it is not just climate change. It is something built into the concrete itself.",
+    "key_data": { "title": "Why Cities Are Ovens" }
+  },
+  {
+    "type": "stat_reveal",
+    "narration_text": "Urban centers can run up to seven degrees Celsius hotter than the countryside around them.",
+    "key_data": { "stat": "7°C", "label": "hotter than surrounding rural areas" }
+  },
+  {
+    "type": "icon_list",
+    "narration_text": "Three things drive it. Dark asphalt absorbs heat. Buildings block cooling wind. And cars plus AC units pump out waste heat all day.",
+    "key_data": {
+      "items": [
+        { "icon": "Car", "text": "Asphalt absorbs heat" },
+        { "icon": "Building2", "text": "Buildings block wind" },
+        { "icon": "Thermometer", "text": "Machines pump waste heat" }
+      ]
+    }
+  },
+  {
+    "type": "chart",
+    "narration_text": "And it is accelerating. The number of extreme heat days in major cities has more than doubled since the nineteen eighties.",
+    "key_data": {
+      "title": "Extreme heat days per year",
+      "bars": [
+        { "label": "1985", "value": 8 },
+        { "label": "1995", "value": 11 },
+        { "label": "2005", "value": 14 },
+        { "label": "2015", "value": 18 },
+        { "label": "2025", "value": 21 }
+      ]
+    }
+  },
+  {
+    "type": "quote",
+    "narration_text": "As one climate scientist put it, we did not just build cities in a warming world. We built machines that make the warming worse.",
+    "key_data": { "quote": "We built machines that make the warming worse.", "attribution": "Urban climate researcher" }
+  },
+  {
+    "type": "comparison",
+    "narration_text": "The fix is surprisingly simple. Painting a roof white can cut its surface temperature by up to thirty degrees compared to a black roof.",
+    "key_data": {
+      "left": { "label": "Black roof", "value": "80°C" },
+      "right": { "label": "White roof", "value": "50°C" }
+    }
+  },
+  {
+    "type": "kinetic_text",
+    "narration_text": "Trees, white roofs, and smarter streets. The heat is a design problem. And design problems have design solutions.",
+    "key_data": {}
+  }
+]

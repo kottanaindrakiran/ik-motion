@@ -1,0 +1,160 @@
+name: Daily IK Video
+
+on:
+  schedule:
+    # 06:30 IST == 01:00 UTC, every day
+    - cron: "0 1 * * *"
+  workflow_dispatch: {}
+
+# Never let two runs overlap — a new run queues until the current one finishes.
+concurrency:
+  group: daily-video
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Setup Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install ffmpeg
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ffmpeg
+
+      - name: Install Chrome/Remotion Linux dependencies
+        run: |
+          # Install each package independently so a renamed/missing package on a
+          # newer Ubuntu image can't fail the whole job (Remotion downloads its
+          # own Chrome Headless Shell; these are its shared-library deps).
+          for pkg in \
+            libnss3 libdbus-1-3 libatk1.0-0 libatk-bridge2.0-0 libcups2 \
+            libxkbcommon0 libxcomposite1 libxdamage1 libxrandr2 libgbm1 \
+            libpango-1.0-0 libcairo2 libasound2t64 libasound2; do
+            sudo apt-get install -y "$pkg" || true
+          done
+
+      - name: Install Python dependencies
+        run: pip install -r pipeline/requirements.txt
+
+      - name: Install Node dependencies (video)
+        working-directory: video
+        run: npm ci || npm install
+
+      - name: Pick today's topic
+        id: topic
+        env:
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+        run: |
+          TOPIC="$(python automation/pick_topic.py)"
+          echo "Chosen topic: $TOPIC"
+          echo "topic=$TOPIC" >> "$GITHUB_OUTPUT"
+
+      - name: Generate video
+        env:
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
+        run: python pipeline/generate.py "${{ steps.topic.outputs.topic }}" --minutes 1
+
+      - name: Compress video for email (<20 MB)
+        run: |
+          ffmpeg -y -i output/video.mp4 \
+            -vf "scale=1280:720:force_original_aspect_ratio=decrease,pad=1280:720:(ow-iw)/2:(oh-ih)/2" \
+            -c:v libx264 -crf 28 -preset veryfast -pix_fmt yuv420p \
+            -c:a aac -b:a 128k -movflags +faststart \
+            output/video_mail.mp4
+          ls -lh output/video_mail.mp4
+
+      - name: Read metadata for email
+        id: meta
+        run: |
+          python - <<'PY' >> "$GITHUB_OUTPUT"
+          import json, os, sys
+          sys.stdout.reconfigure(encoding="utf-8")
+
+          meta = json.load(open("output/metadata.json", encoding="utf-8"))
+          title = meta.get("title", "Untitled")
+          description = meta.get("description", "")
+          hashtags = meta.get("hashtags", [])
+
+          topic = os.environ["TOPIC"]
+          date = os.environ["RUN_DATE"]
+          run_url = os.environ["RUN_URL"]
+
+          body_lines = [
+              title,
+              "",
+              description,
+              "",
+          ]
+          body_lines += list(hashtags)
+          body_lines += [
+              "",
+              f"Topic: {topic}",
+              f"Date: {date}",
+              "",
+              f"Full-quality download (workflow artifact, kept 7 days): {run_url}",
+          ]
+          body = "\n".join(body_lines)
+
+          # subject (single line)
+          print(f"subject=\U0001F3AC Daily IK Video — {title}")
+          # multi-line body via heredoc delimiter
+          print("body<<__EOF_BODY__")
+          print(body)
+          print("__EOF_BODY__")
+          PY
+        env:
+          TOPIC: ${{ steps.topic.outputs.topic }}
+          RUN_DATE: ${{ github.run_started_at }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+
+      - name: Email the video
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.gmail.com
+          server_port: 465
+          secure: true
+          username: kottanaindrakiran@gmail.com
+          password: ${{ secrets.GMAIL_APP_PASSWORD }}
+          from: kottanaindrakiran@gmail.com
+          to: kottanaindrakiran@gmail.com
+          subject: ${{ steps.meta.outputs.subject }}
+          body: ${{ steps.meta.outputs.body }}
+          attachments: output/video_mail.mp4
+
+      - name: Upload full-quality video artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ik-video-full-quality
+          path: output/video.mp4
+          retention-days: 7
+
+      - name: Commit updated topic history
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add automation/topic_history.json
+          if git diff --cached --quiet; then
+            echo "No topic history changes to commit."
+          else
+            git commit -m "chore: record daily topic [skip ci]"
+            git pull --rebase --autostash origin main || true
+            git push origin HEAD:main
+          fi

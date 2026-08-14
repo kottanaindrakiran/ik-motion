@@ -1,0 +1,34 @@
+# Secrets — NEVER commit
+.env
+.env.local
+*.key
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# Node
+node_modules/
+
+# Pipeline output & generated media
+output/
+video/public/media/
+video/public/narration.mp3
+assets/music/*.mp3
+.remotion/
+
+# Rendered videos
+*.mp4
+
+# UI / build caches
+ui/.cache/
+content-tracker/.cache/
+.render-tmp/
+.voice_cache/
+
+# OS / editor
+.DS_Store
+Thumbs.db
