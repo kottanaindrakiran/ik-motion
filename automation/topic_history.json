@@ -1,1 +1,50 @@
-[]
+[
+  {
+    "date": "2026-08-14",
+    "topic": "Why 90% of Australians live on the edge of the country",
+    "channel": "atlas",
+    "kind": "short"
+  },
+  {
+    "date": "2026-08-14",
+    "topic": "The country that is running out of people",
+    "channel": "atlas",
+    "kind": "short"
+  },
+  {
+    "date": "2026-08-14",
+    "topic": "Why your brain hates starting tasks — procrastination explained",
+    "channel": "minds",
+    "kind": "short"
+  },
+  {
+    "date": "2026-08-14",
+    "topic": "The 5-second trick your brain cannot resist",
+    "channel": "minds",
+    "kind": "short"
+  },
+  {
+    "date": "2026-08-14",
+    "topic": "Black holes make a sound — and we recorded it",
+    "channel": "space",
+    "kind": "short"
+  },
+  {
+    "date": "2026-08-14",
+    "topic": "The Moon is slowly leaving us",
+    "channel": "space",
+    "kind": "short"
+  },
+  {
+    "date": "2026-08-14",
+    "topic": "AI has learned to lie — and researchers are worried",
+    "channel": "future",
+    "kind": "short"
+  },
+  {
+    "date": "2026-08-14",
+    "topic": "The first jobs AI is replacing — not the ones you think",
+    "channel": "future",
+    "kind": "short"
+  }
+]
