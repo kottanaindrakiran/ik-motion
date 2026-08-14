@@ -23,6 +23,23 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Preflight — verify required secrets are set
+        env:
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+        run: |
+          missing=""
+          [ -z "$GROQ_API_KEY" ]       && missing="$missing GROQ_API_KEY"
+          [ -z "$PEXELS_API_KEY" ]     && missing="$missing PEXELS_API_KEY"
+          [ -z "$GMAIL_APP_PASSWORD" ] && missing="$missing GMAIL_APP_PASSWORD"
+          if [ -n "$missing" ]; then
+            echo "::error::Missing repo secret(s):$missing"
+            echo "Add them at Settings -> Secrets and variables -> Actions -> New repository secret."
+            exit 1
+          fi
+          echo "All required secrets are present."
+
       - name: Setup Node 22
         uses: actions/setup-node@v4
         with:
