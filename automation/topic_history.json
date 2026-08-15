@@ -46,5 +46,53 @@
     "topic": "The first jobs AI is replacing — not the ones you think",
     "channel": "future",
     "kind": "short"
+  },
+  {
+    "date": "2026-08-15",
+    "topic": "Why Africa is splitting into two continents",
+    "channel": "atlas",
+    "kind": "short"
+  },
+  {
+    "date": "2026-08-15",
+    "topic": "The richest country you've never heard of",
+    "channel": "atlas",
+    "kind": "short"
+  },
+  {
+    "date": "2026-08-15",
+    "topic": "Why you remember embarrassing moments forever",
+    "channel": "minds",
+    "kind": "short"
+  },
+  {
+    "date": "2026-08-15",
+    "topic": "How ads know you better than your own friends",
+    "channel": "minds",
+    "kind": "short"
+  },
+  {
+    "date": "2026-08-15",
+    "topic": "A day on Venus is longer than its entire year",
+    "channel": "space",
+    "kind": "short"
+  },
+  {
+    "date": "2026-08-15",
+    "topic": "The star that could explode in your lifetime",
+    "channel": "space",
+    "kind": "short"
+  },
+  {
+    "date": "2026-08-15",
+    "topic": "Why your next doctor might be an algorithm",
+    "channel": "future",
+    "kind": "short"
+  },
+  {
+    "date": "2026-08-15",
+    "topic": "The robot that taught itself to walk in one hour",
+    "channel": "future",
+    "kind": "short"
   }
 ]
