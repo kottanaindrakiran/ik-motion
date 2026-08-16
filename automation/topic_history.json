@@ -94,5 +94,53 @@
     "topic": "The robot that taught itself to walk in one hour",
     "channel": "future",
     "kind": "short"
+  },
+  {
+    "date": "2026-08-16",
+    "topic": "Why no one can buy land in this country",
+    "channel": "atlas",
+    "kind": "short"
+  },
+  {
+    "date": "2026-08-16",
+    "topic": "The city that is sinking 25 cm every year",
+    "channel": "atlas",
+    "kind": "short"
+  },
+  {
+    "date": "2026-08-16",
+    "topic": "Why smart people make dumb decisions",
+    "channel": "minds",
+    "kind": "short"
+  },
+  {
+    "date": "2026-08-16",
+    "topic": "The psychology of why you can't stop scrolling",
+    "channel": "minds",
+    "kind": "short"
+  },
+  {
+    "date": "2026-08-16",
+    "topic": "Why space smells like burnt steak",
+    "channel": "space",
+    "kind": "short"
+  },
+  {
+    "date": "2026-08-16",
+    "topic": "The planet where it rains glass sideways",
+    "channel": "space",
+    "kind": "short"
+  },
+  {
+    "date": "2026-08-16",
+    "topic": "Why AI still can't draw hands",
+    "channel": "future",
+    "kind": "short"
+  },
+  {
+    "date": "2026-08-16",
+    "topic": "The country betting its entire future on robots",
+    "channel": "future",
+    "kind": "short"
   }
 ]
