@@ -142,5 +142,77 @@
     "topic": "The country betting its entire future on robots",
     "channel": "future",
     "kind": "short"
+  },
+  {
+    "date": "2026-08-17",
+    "topic": "Why Russia is so big but so empty",
+    "channel": "atlas",
+    "kind": "short"
+  },
+  {
+    "date": "2026-08-17",
+    "topic": "The border you can walk across in 5 minutes but takes 4 hours by train",
+    "channel": "atlas",
+    "kind": "short"
+  },
+  {
+    "date": "2026-08-17",
+    "topic": "Why your brain invents faces in the dark",
+    "channel": "minds",
+    "kind": "short"
+  },
+  {
+    "date": "2026-08-17",
+    "topic": "The trick restaurants use to make you spend more",
+    "channel": "minds",
+    "kind": "short"
+  },
+  {
+    "date": "2026-08-17",
+    "topic": "Why astronauts age slower than you",
+    "channel": "space",
+    "kind": "short"
+  },
+  {
+    "date": "2026-08-17",
+    "topic": "The biggest known structure in the universe",
+    "channel": "space",
+    "kind": "short"
+  },
+  {
+    "date": "2026-08-17",
+    "topic": "Why deepfakes are becoming impossible to detect",
+    "channel": "future",
+    "kind": "short"
+  },
+  {
+    "date": "2026-08-17",
+    "topic": "The AI that beats doctors at reading X-rays",
+    "channel": "future",
+    "kind": "short"
+  },
+  {
+    "date": "2026-08-17",
+    "topic": "Why some countries are rich and others stay poor — the full story",
+    "channel": "atlas",
+    "kind": "long"
+  },
+  {
+    "date": "2026-08-17",
+    "topic": "How social media hacks your brain — the full psychology of addiction",
+    "channel": "minds",
+    "kind": "long"
+  },
+  {
+    "date": "2026-08-17",
+    "topic": "Black holes explained — from birth to spaghettification",
+    "channel": "space",
+    "kind": "long"
+  },
+  {
+    "date": "2026-08-17",
+    "topic": "How AI actually works — explained so anyone can understand it",
+    "channel": "future",
+    "kind": "long"
   }
 ]
