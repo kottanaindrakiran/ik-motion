@@ -214,5 +214,53 @@
     "topic": "How AI actually works — explained so anyone can understand it",
     "channel": "future",
     "kind": "long"
+  },
+  {
+    "date": "2026-08-18",
+    "topic": "Why Japan builds islands from scratch",
+    "channel": "atlas",
+    "kind": "short"
+  },
+  {
+    "date": "2026-08-18",
+    "topic": "The country with no rivers at all",
+    "channel": "atlas",
+    "kind": "short"
+  },
+  {
+    "date": "2026-08-18",
+    "topic": "Why deadlines magically make you faster",
+    "channel": "minds",
+    "kind": "short"
+  },
+  {
+    "date": "2026-08-18",
+    "topic": "Why you forget someone's name in 5 seconds",
+    "channel": "minds",
+    "kind": "short"
+  },
+  {
+    "date": "2026-08-18",
+    "topic": "Why sunsets on Mars are blue",
+    "channel": "space",
+    "kind": "short"
+  },
+  {
+    "date": "2026-08-18",
+    "topic": "The ocean hiding inside Saturn's moon",
+    "channel": "space",
+    "kind": "short"
+  },
+  {
+    "date": "2026-08-18",
+    "topic": "The real reason self-driving cars are taking so long",
+    "channel": "future",
+    "kind": "short"
+  },
+  {
+    "date": "2026-08-18",
+    "topic": "The chip shortage that runs world politics",
+    "channel": "future",
+    "kind": "short"
   }
 ]
