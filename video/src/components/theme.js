@@ -55,6 +55,15 @@ const PALETTES = {
     {bg: "#08040f", fg: "#f7e9ff", accent: "#f72585", soft: "rgba(247,37,133,0.09)"},
     {bg: "#16092b", fg: "#ffffff", accent: "#4cc9f0", soft: "rgba(76,201,240,0.11)"},
   ],
+  // Hand-drawn whiteboard-doodle look: near-black ink figures on light paper,
+  // one accent per channel. skin "stick" makes Shell paint clean light paper so
+  // non-stick scenes in a full stick video stay coherent.
+  stick: [
+    {bg: "#f7f5ef", fg: "#16161a", accent: "#e4572e", card: "#fffdf7", soft: "rgba(228,87,46,0.10)", skin: "stick"},
+    {bg: "#f5f3ec", fg: "#16161a", accent: "#2a9d8f", card: "#fffdf7", soft: "rgba(42,157,143,0.10)", skin: "stick"},
+    {bg: "#f7f4ea", fg: "#16161a", accent: "#3d5a80", card: "#fffdf7", soft: "rgba(61,90,128,0.10)", skin: "stick"},
+    {bg: "#f6f2ea", fg: "#16161a", accent: "#e63946", card: "#fffdf7", soft: "rgba(230,57,70,0.10)", skin: "stick"},
+  ],
   // Vintage detective-corkboard documentary look. skin "archive" swaps the
   // whole render style (paper texture, pinned cards, stamps) via Shell/scenes.
   archive: [

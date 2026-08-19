@@ -16,15 +16,68 @@ const tornPolygon = (seed, steps = 16, amp = 3.2) => {
 };
 
 /**
+ * Clean light-paper variant for the stick-figure ("stick") skin: base colour,
+ * faint feTurbulence grain, a few soft specks and a barely-there vignette — no
+ * torn sheets, map lines or scanlines. Deterministic. Kept in this file so the
+ * grain technique is reused rather than duplicated.
+ */
+const StickPaper = ({base}) => {
+  const {width, height} = useVideoConfig();
+  const sf = Math.min(width, height) / 1080;
+  const specks = Array.from({length: 22}, (_, i) => ({
+    x: random(`stk-x-${i}`) * 100,
+    y: random(`stk-y-${i}`) * 100,
+    r: (0.5 + random(`stk-r-${i}`) * 1.8) * sf,
+    o: 0.03 + random(`stk-o-${i}`) * 0.08,
+  }));
+  return (
+    <AbsoluteFill style={{backgroundColor: base, overflow: "hidden"}}>
+      {specks.map((s, i) => (
+        <div
+          key={i}
+          style={{
+            position: "absolute",
+            left: `${s.x}%`,
+            top: `${s.y}%`,
+            width: s.r,
+            height: s.r,
+            borderRadius: "50%",
+            backgroundColor: "#2a2620",
+            opacity: s.o,
+          }}
+        />
+      ))}
+      <svg
+        style={{position: "absolute", inset: 0, width: "100%", height: "100%", opacity: 0.045, mixBlendMode: "multiply"}}
+      >
+        <filter id="stickGrain">
+          <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch" />
+        </filter>
+        <rect width="100%" height="100%" filter="url(#stickGrain)" />
+      </svg>
+      <AbsoluteFill
+        style={{
+          background:
+            "radial-gradient(ellipse at 50% 46%, rgba(60,50,30,0) 62%, rgba(60,50,30,0.10) 100%)",
+        }}
+      />
+    </AbsoluteFill>
+  );
+};
+
+/**
  * Layered old-paper background — all code-generated (no texture images):
  * base color, torn cream sheets, feTurbulence grain, faint map lines,
  * ink specks, scanlines and a strong vignette. Fully deterministic.
+ * variant "stick" swaps in the clean light-paper look above.
  */
-const PaperBackground = ({theme}) => {
+const PaperBackground = ({theme, variant = "archive"}) => {
   const {width, height} = useVideoConfig();
   const sf = Math.min(width, height) / 1080;
   const base = theme.bg || "#e8dcc3";
   const card = theme.card || "#f5efdf";
+
+  if (variant === "stick") return <StickPaper base={base} />;
 
   const sheets = [
     {c: card, rot: -2.4, x: -4, y: -5, w: 76, h: 92, seed: "sheetA"},

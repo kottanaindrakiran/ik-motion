@@ -5,8 +5,17 @@ MODEL = "llama-3.3-70b-versatile"
 
 VALID_TYPES = {
     "title_card", "kinetic_text", "stat_reveal", "icon_list",
-    "quote", "timeline", "comparison", "chart", "media",
+    "quote", "timeline", "comparison", "chart", "media", "stick",
 }
+
+# Vocabularies the "stick" scene understands (kept in sync with
+# video/src/components/stick/{poses,faces,props}.js).
+STICK_POSES = ("idle, point_up, point_side, walk_a, walk_b, run_a, run_b, jump, "
+               "land, sit, think, shrug, celebrate, facepalm, lift, push, carry, "
+               "fall, wave, type, look_up, present")
+STICK_EXPRESSIONS = "neutral, happy, shocked, sad, angry, confused, thinking, excited"
+STICK_PROPS = ("box, phone, book, rocket, planet, brain, arrow_up, arrow_down, "
+               "money, clock, bulb, globe, chip, question, chart (or null for none)")
 
 SYSTEM = """You are a scriptwriter for Vox-style explainer videos: punchy, factual, conversational, short sentences, surprising angles.
 
@@ -31,6 +40,33 @@ Rules:
 - Use real, accurate numbers. Stats and chart values must be factual.
 - narration_text must flow naturally scene to scene, like one continuous script.
 - If the topic is visual (nature, places, cities, technology, science, animals, sports, lifestyle, history, etc.), make MOST scenes — about 60 to 75 percent — type "media" so real footage/photos play through the whole video from start to finish. Give each media scene a specific, searchable "query" (a concrete filmable subject, never an abstract concept), and VARY the queries so the footage is never repetitive. Still sprinkle in a few stat_reveal / chart / quote scenes for key facts and pacing. Only for purely abstract topics with nothing to film should you use few media scenes."""
+
+
+# Stick-figure scene instructions, appended so the pose/expression/prop
+# vocabularies stay sourced from the constants above.
+STICK_GUIDE = f"""
+
+EXTRA scene type — "stick" (hand-drawn stick-figure doodle that ACTS OUT the sentence; ink adapts to the palette):
+- "stick": {{"headline": "short on-screen line, max 8 words", "figures": [
+    {{"id": "a", "scale": 1.0, "flip": false,
+      "expression": "one of: {STICK_EXPRESSIONS}",
+      "prop": "one of: {STICK_PROPS}",
+      "keyframes": [
+        {{"at": 0.0, "pose": "a pose name", "x": 0.30, "y": 0.66}},
+        {{"at": 1.0, "pose": "a pose name", "x": 0.45, "y": 0.66}}
+      ]}}
+  ]}}
+  Valid poses: {STICK_POSES}.
+  Stick rules: 1-2 figures. 2-4 keyframes per figure. "at" is scene progress 0..1 (first keyframe 0.0, last 1.0). x/y are 0..1 canvas positions; keep y between 0.60 and 0.72 so figures stay below the headline; flip:true faces the figure left (use it for a second figure so two figures face each other). Pick poses that literally match the narrated action: walking->walk_a/walk_b, running->run_a/run_b, pointing out a fact->point_up/point_side, weighing an idea->think, a win->celebrate, a setback->facepalm or fall, a burden->carry/lift, presenting->present, greeting->wave. Match the expression to the tone.
+
+When to use "stick" (HARD LIMITS):
+- Use "stick" for 2 to 4 scenes per video, NEVER more. Most scenes are still media/stat/chart/etc.
+- Only use it when the sentence describes ONE of: (a) an ACTION someone performs, (b) a PERSON or character doing something, or (c) a BEFORE/AFTER or cause-and-effect story beat.
+- NEVER use "stick" for pure data, statistics, numbers, percentages, money figures, or anything chart-like — those MUST stay stat_reveal / chart / comparison.
+- Prefer "stick" over "kinetic_text" only when a little character acting genuinely lands the point; otherwise leave the beat as its normal type.
+- Keep "media" for concrete filmable subjects, and never repeat the same type twice in a row."""
+
+SYSTEM = SYSTEM + STICK_GUIDE
 
 
 def _parse_scenes(content: str) -> list[dict]:

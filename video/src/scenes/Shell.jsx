@@ -87,11 +87,18 @@ const Shell = ({theme, children, style}) => {
   const frame = useCurrentFrame();
   const sf = useSf();
   const isArchive = theme.skin === "archive";
+  const isStick = theme.skin === "stick";
   // Slow push-in so scenes never feel static (max ~3% over a long scene).
   const drift = Math.min(1.03, 1 + frame * 0.00022);
   return (
     <AbsoluteFill style={{backgroundColor: theme.bg, overflow: "hidden"}}>
-      {isArchive ? <PaperBackground theme={theme} /> : <Decor theme={theme} sf={sf} />}
+      {isArchive ? (
+        <PaperBackground theme={theme} />
+      ) : isStick ? (
+        <PaperBackground theme={theme} variant="stick" />
+      ) : (
+        <Decor theme={theme} sf={sf} />
+      )}
       <AbsoluteFill
         style={{
           justifyContent: "center",

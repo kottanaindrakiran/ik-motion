@@ -1,62 +1,123 @@
 {
-  "topic": "Sample: Why Cities Are Ovens",
+  "topic": "Sample: The Stick-Figure Skin",
   "fps": 30,
   "format": { "width": 1920, "height": 1080 },
-  "palette": "vox",
+  "palette": "stick",
   "audio": { "narration": null },
-  "totalDuration": 23.5,
+  "totalDuration": 36,
   "scenes": [
     {
       "type": "title_card",
-      "narration_text": "Cities are getting hotter, and it is not just climate change.",
-      "key_data": { "title": "Why Cities Are Ovens" },
+      "narration_text": "Some ideas land better as a doodle than a chart.",
+      "key_data": { "title": "Drawn To Explain" },
       "start": 0,
       "duration": 4
     },
     {
-      "type": "stat_reveal",
-      "narration_text": "Urban centers can run up to seven degrees hotter than the countryside.",
-      "key_data": { "stat": "7°C", "label": "hotter than surrounding rural areas" },
+      "type": "stick",
+      "narration_text": "Your brain is just two percent of your body weight, yet it burns about twenty percent of your energy.",
+      "key_data": {
+        "headline": "Your brain burns 20% of your energy",
+        "figures": [
+          {
+            "id": "a",
+            "scale": 1.0,
+            "flip": false,
+            "expression": "shocked",
+            "prop": "brain",
+            "keyframes": [
+              { "at": 0.0, "pose": "idle", "x": 0.32, "y": 0.66 },
+              { "at": 0.45, "pose": "point_up", "x": 0.32, "y": 0.66 },
+              { "at": 1.0, "pose": "celebrate", "x": 0.4, "y": 0.66 }
+            ]
+          }
+        ]
+      },
       "start": 4,
+      "duration": 6
+    },
+    {
+      "type": "stat_reveal",
+      "narration_text": "That is a huge amount of fuel for one small organ.",
+      "key_data": { "stat": "20%", "label": "of your daily energy" },
+      "start": 10,
       "duration": 4
     },
     {
-      "type": "icon_list",
-      "narration_text": "Asphalt absorbs heat. Buildings block wind. Machines pump out waste heat.",
+      "type": "stick",
+      "narration_text": "Picture two people. One hauls the load across the room while the other just stands back and thinks.",
       "key_data": {
-        "items": [
-          { "icon": "Car", "text": "Asphalt absorbs heat" },
-          { "icon": "Building2", "text": "Buildings block wind" },
-          { "icon": "Thermometer", "text": "Machines pump waste heat" }
+        "headline": "Every choice carries a cost",
+        "figures": [
+          {
+            "id": "a",
+            "scale": 1.0,
+            "flip": false,
+            "expression": "neutral",
+            "prop": "box",
+            "keyframes": [
+              { "at": 0.0, "pose": "walk_a", "x": 0.12, "y": 0.68 },
+              { "at": 0.3, "pose": "walk_b", "x": 0.28, "y": 0.68 },
+              { "at": 0.6, "pose": "walk_a", "x": 0.42, "y": 0.68 },
+              { "at": 1.0, "pose": "carry", "x": 0.5, "y": 0.68 }
+            ]
+          },
+          {
+            "id": "b",
+            "scale": 0.95,
+            "flip": true,
+            "expression": "thinking",
+            "prop": null,
+            "keyframes": [
+              { "at": 0.0, "pose": "idle", "x": 0.8, "y": 0.68 },
+              { "at": 0.5, "pose": "point_side", "x": 0.8, "y": 0.68 },
+              { "at": 1.0, "pose": "think", "x": 0.8, "y": 0.68 }
+            ]
+          }
         ]
       },
-      "start": 8,
-      "duration": 5
-    },
-    {
-      "type": "chart",
-      "narration_text": "Extreme heat days in major cities have more than doubled since the eighties.",
-      "key_data": {
-        "title": "Extreme heat days per year",
-        "bars": [
-          { "label": "1985", "value": 8 },
-          { "label": "1995", "value": 11 },
-          { "label": "2005", "value": 14 },
-          { "label": "2015", "value": 18 },
-          { "label": "2025", "value": 21 }
-        ]
-      },
-      "start": 13,
-      "duration": 5
+      "start": 14,
+      "duration": 6
     },
     {
       "type": "comparison",
-      "narration_text": "Painting a roof white can cut its surface temperature by thirty degrees.",
+      "narration_text": "Effort in, results out. The trade-off is always there.",
       "key_data": {
-        "left": { "label": "Black roof", "value": "80°C" },
-        "right": { "label": "White roof", "value": "50°C" }
+        "left": { "label": "Effort", "value": "High" },
+        "right": { "label": "Payoff", "value": "Higher" }
       },
-      "start": 18,
+      "start": 20,
+      "duration": 5
+    },
+    {
+      "type": "stick",
+      "narration_text": "Give the idea a running start, and it finally takes off, then sticks the landing.",
+      "key_data": {
+        "headline": "Then it takes off",
+        "figures": [
+          {
+            "id": "a",
+            "scale": 1.0,
+            "flip": false,
+            "expression": "excited",
+            "prop": "rocket",
+            "keyframes": [
+              { "at": 0.0, "pose": "run_a", "x": 0.18, "y": 0.7 },
+              { "at": 0.35, "pose": "run_b", "x": 0.4, "y": 0.7 },
+              { "at": 0.6, "pose": "jump", "x": 0.62, "y": 0.6 },
+              { "at": 1.0, "pose": "land", "x": 0.78, "y": 0.7 }
+            ]
+          }
+        ]
+      },
+      "start": 25,
+      "duration": 6
+    },
+    {
+      "type": "kinetic_text",
+      "narration_text": "Simple lines. Clear ideas. That is the whole trick.",
+      "key_data": {},
+      "start": 31,
       "duration": 5
     }
   ]

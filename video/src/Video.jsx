@@ -18,6 +18,7 @@ import ChartScene from "./scenes/ChartScene";
 import KineticScene from "./scenes/KineticScene";
 import MediaScene from "./scenes/MediaScene";
 import OutroScene from "./scenes/OutroScene";
+import StickScene from "./scenes/StickScene";
 import Brand from "./components/Brand";
 
 const SCENE_MAP = {
@@ -31,6 +32,7 @@ const SCENE_MAP = {
   kinetic_text: KineticScene,
   media: MediaScene,
   outro: OutroScene,
+  stick: StickScene,
 };
 
 export const Main = (props) => {

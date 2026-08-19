@@ -51,5 +51,82 @@
     "type": "kinetic_text",
     "narration_text": "Trees, white roofs, and smarter streets. The heat is a design problem. And design problems have design solutions.",
     "key_data": {}
+  },
+  {
+    "type": "stick",
+    "narration_text": "Think of the city as a person carrying too much heat, pointing at the problem, then finally getting it.",
+    "key_data": {
+      "headline": "The city is holding in heat",
+      "figures": [
+        {
+          "id": "a",
+          "scale": 1.0,
+          "flip": false,
+          "expression": "shocked",
+          "prop": "bulb",
+          "keyframes": [
+            { "at": 0.0, "pose": "idle", "x": 0.34, "y": 0.66 },
+            { "at": 0.5, "pose": "point_up", "x": 0.34, "y": 0.66 },
+            { "at": 1.0, "pose": "celebrate", "x": 0.42, "y": 0.66 }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "type": "stick",
+    "narration_text": "One person hauls a white roof panel across town while another watches and slowly understands the fix.",
+    "key_data": {
+      "headline": "White roofs carry the load",
+      "figures": [
+        {
+          "id": "a",
+          "scale": 1.0,
+          "flip": false,
+          "expression": "neutral",
+          "prop": "box",
+          "keyframes": [
+            { "at": 0.0, "pose": "walk_a", "x": 0.14, "y": 0.68 },
+            { "at": 0.35, "pose": "walk_b", "x": 0.3, "y": 0.68 },
+            { "at": 0.7, "pose": "walk_a", "x": 0.44, "y": 0.68 },
+            { "at": 1.0, "pose": "carry", "x": 0.52, "y": 0.68 }
+          ]
+        },
+        {
+          "id": "b",
+          "scale": 0.95,
+          "flip": true,
+          "expression": "thinking",
+          "prop": null,
+          "keyframes": [
+            { "at": 0.0, "pose": "idle", "x": 0.82, "y": 0.68 },
+            { "at": 0.5, "pose": "point_side", "x": 0.82, "y": 0.68 },
+            { "at": 1.0, "pose": "think", "x": 0.82, "y": 0.68 }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "type": "stick",
+    "narration_text": "With the right design the whole idea takes a running leap, jumps the gap, and sticks the landing.",
+    "key_data": {
+      "headline": "Good design sticks the landing",
+      "figures": [
+        {
+          "id": "a",
+          "scale": 1.0,
+          "flip": false,
+          "expression": "excited",
+          "prop": "rocket",
+          "keyframes": [
+            { "at": 0.0, "pose": "run_a", "x": 0.18, "y": 0.7 },
+            { "at": 0.35, "pose": "run_b", "x": 0.4, "y": 0.7 },
+            { "at": 0.6, "pose": "jump", "x": 0.62, "y": 0.6 },
+            { "at": 1.0, "pose": "land", "x": 0.78, "y": 0.7 }
+          ]
+        }
+      ]
+    }
   }
 ]
