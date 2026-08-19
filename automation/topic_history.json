@@ -262,5 +262,53 @@
     "topic": "The chip shortage that runs world politics",
     "channel": "future",
     "kind": "short"
+  },
+  {
+    "date": "2026-08-19",
+    "topic": "Why the Netherlands should be underwater by now",
+    "channel": "atlas",
+    "kind": "short"
+  },
+  {
+    "date": "2026-08-19",
+    "topic": "The most crowded square kilometer on Earth",
+    "channel": "atlas",
+    "kind": "short"
+  },
+  {
+    "date": "2026-08-19",
+    "topic": "Why crowds make people invisible — the bystander effect",
+    "channel": "minds",
+    "kind": "short"
+  },
+  {
+    "date": "2026-08-19",
+    "topic": "The psychology behind lucky streaks",
+    "channel": "minds",
+    "kind": "short"
+  },
+  {
+    "date": "2026-08-19",
+    "topic": "Why the universe itself has a temperature",
+    "channel": "space",
+    "kind": "short"
+  },
+  {
+    "date": "2026-08-19",
+    "topic": "The loneliest place in the universe",
+    "channel": "space",
+    "kind": "short"
+  },
+  {
+    "date": "2026-08-19",
+    "topic": "Why AI companies are buying nuclear power plants",
+    "channel": "future",
+    "kind": "short"
+  },
+  {
+    "date": "2026-08-19",
+    "topic": "The dead internet theory explained",
+    "channel": "future",
+    "kind": "short"
   }
 ]
