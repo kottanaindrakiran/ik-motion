@@ -382,5 +382,53 @@
     "topic": "The AI arms race between the USA and China, explained",
     "channel": "future",
     "kind": "long"
+  },
+  {
+    "date": "2026-08-21",
+    "topic": "How Singapore became rich with zero natural resources",
+    "channel": "atlas",
+    "kind": "short"
+  },
+  {
+    "date": "2026-08-21",
+    "topic": "The African country much richer than you think",
+    "channel": "atlas",
+    "kind": "short"
+  },
+  {
+    "date": "2026-08-21",
+    "topic": "Why you keep buying things you don't need",
+    "channel": "minds",
+    "kind": "short"
+  },
+  {
+    "date": "2026-08-21",
+    "topic": "The 2-minute rule that beats procrastination",
+    "channel": "minds",
+    "kind": "short"
+  },
+  {
+    "date": "2026-08-21",
+    "topic": "Why time stops inside a black hole",
+    "channel": "space",
+    "kind": "short"
+  },
+  {
+    "date": "2026-08-21",
+    "topic": "The mystery radio signal that repeats from deep space",
+    "channel": "space",
+    "kind": "short"
+  },
+  {
+    "date": "2026-08-21",
+    "topic": "Why batteries are the real technology race",
+    "channel": "future",
+    "kind": "short"
+  },
+  {
+    "date": "2026-08-21",
+    "topic": "The algorithm that decides what you watch tonight",
+    "channel": "future",
+    "kind": "short"
   }
 ]
