@@ -430,5 +430,53 @@
     "topic": "The algorithm that decides what you watch tonight",
     "channel": "future",
     "kind": "short"
+  },
+  {
+    "date": "2026-08-22",
+    "topic": "Why nobody lives in the middle of Australia",
+    "channel": "atlas",
+    "kind": "short"
+  },
+  {
+    "date": "2026-08-22",
+    "topic": "The island owned by two countries at once",
+    "channel": "atlas",
+    "kind": "short"
+  },
+  {
+    "date": "2026-08-22",
+    "topic": "Why first impressions are almost impossible to change",
+    "channel": "minds",
+    "kind": "short"
+  },
+  {
+    "date": "2026-08-22",
+    "topic": "Why waiting in line feels longer than it is",
+    "channel": "minds",
+    "kind": "short"
+  },
+  {
+    "date": "2026-08-22",
+    "topic": "Why astronauts come back taller",
+    "channel": "space",
+    "kind": "short"
+  },
+  {
+    "date": "2026-08-22",
+    "topic": "The galaxy heading straight for us right now",
+    "channel": "space",
+    "kind": "short"
+  },
+  {
+    "date": "2026-08-22",
+    "topic": "Why AI can't say 'I don't know'",
+    "channel": "future",
+    "kind": "short"
+  },
+  {
+    "date": "2026-08-22",
+    "topic": "Inside the warehouse with zero humans",
+    "channel": "future",
+    "kind": "short"
   }
 ]
