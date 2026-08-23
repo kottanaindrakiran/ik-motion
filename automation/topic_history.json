@@ -478,5 +478,53 @@
     "topic": "Inside the warehouse with zero humans",
     "channel": "future",
     "kind": "short"
+  },
+  {
+    "date": "2026-08-23",
+    "topic": "Why Egypt is building a brand new capital city",
+    "channel": "atlas",
+    "kind": "short"
+  },
+  {
+    "date": "2026-08-23",
+    "topic": "The narrow strait that controls 30% of world trade",
+    "channel": "atlas",
+    "kind": "short"
+  },
+  {
+    "date": "2026-08-23",
+    "topic": "Why your brain is addicted to bad news",
+    "channel": "minds",
+    "kind": "short"
+  },
+  {
+    "date": "2026-08-23",
+    "topic": "The placebo effect is stranger than you think",
+    "channel": "minds",
+    "kind": "short"
+  },
+  {
+    "date": "2026-08-23",
+    "topic": "The Sun is white — not yellow",
+    "channel": "space",
+    "kind": "short"
+  },
+  {
+    "date": "2026-08-23",
+    "topic": "The coldest place in the universe is man-made",
+    "channel": "space",
+    "kind": "short"
+  },
+  {
+    "date": "2026-08-23",
+    "topic": "Why tech billionaires are building bunkers",
+    "channel": "future",
+    "kind": "short"
+  },
+  {
+    "date": "2026-08-23",
+    "topic": "The AI that reads your brain waves",
+    "channel": "future",
+    "kind": "short"
   }
 ]
