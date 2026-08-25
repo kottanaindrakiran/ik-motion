@@ -598,5 +598,53 @@
     "topic": "Will AI take your job? An honest 10-year forecast",
     "channel": "future",
     "kind": "long"
+  },
+  {
+    "date": "2026-08-25",
+    "topic": "Why China built dozens of empty mega cities",
+    "channel": "atlas",
+    "kind": "short"
+  },
+  {
+    "date": "2026-08-25",
+    "topic": "The tiny country that secretly runs global banking",
+    "channel": "atlas",
+    "kind": "short"
+  },
+  {
+    "date": "2026-08-25",
+    "topic": "Why gamblers always think they're about to win",
+    "channel": "minds",
+    "kind": "short"
+  },
+  {
+    "date": "2026-08-25",
+    "topic": "The hidden psychology of colors in logos",
+    "channel": "minds",
+    "kind": "short"
+  },
+  {
+    "date": "2026-08-25",
+    "topic": "Why you only ever see one side of the Moon",
+    "channel": "space",
+    "kind": "short"
+  },
+  {
+    "date": "2026-08-25",
+    "topic": "The fastest object humans have ever built",
+    "channel": "space",
+    "kind": "short"
+  },
+  {
+    "date": "2026-08-25",
+    "topic": "Why robots still can't fold your laundry",
+    "channel": "future",
+    "kind": "short"
+  },
+  {
+    "date": "2026-08-25",
+    "topic": "The startup growing real meat without animals",
+    "channel": "future",
+    "kind": "short"
   }
 ]
