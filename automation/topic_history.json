@@ -646,5 +646,53 @@
     "topic": "The startup growing real meat without animals",
     "channel": "future",
     "kind": "short"
+  },
+  {
+    "date": "2026-08-26",
+    "topic": "Why India's borders look impossible to defend",
+    "channel": "atlas",
+    "kind": "short"
+  },
+  {
+    "date": "2026-08-26",
+    "topic": "The sea that is disappearing in real time",
+    "channel": "atlas",
+    "kind": "short"
+  },
+  {
+    "date": "2026-08-26",
+    "topic": "Why you dream about falling",
+    "channel": "minds",
+    "kind": "short"
+  },
+  {
+    "date": "2026-08-26",
+    "topic": "Why unfinished tasks haunt your brain — the Zeigarnik effect",
+    "channel": "minds",
+    "kind": "short"
+  },
+  {
+    "date": "2026-08-26",
+    "topic": "Why space is completely silent",
+    "channel": "space",
+    "kind": "short"
+  },
+  {
+    "date": "2026-08-26",
+    "topic": "Zombie stars — the dead stars that refuse to die",
+    "channel": "space",
+    "kind": "short"
+  },
+  {
+    "date": "2026-08-26",
+    "topic": "What quietly killed the metaverse",
+    "channel": "future",
+    "kind": "short"
+  },
+  {
+    "date": "2026-08-26",
+    "topic": "How drone swarms are changing warfare",
+    "channel": "future",
+    "kind": "short"
   }
 ]
