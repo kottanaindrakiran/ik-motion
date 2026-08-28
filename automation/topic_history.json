@@ -766,5 +766,53 @@
     "topic": "How one chip company became the most important on Earth",
     "channel": "future",
     "kind": "long"
+  },
+  {
+    "date": "2026-08-28",
+    "topic": "Why deserts are suddenly full of billionaires",
+    "channel": "atlas",
+    "kind": "short"
+  },
+  {
+    "date": "2026-08-28",
+    "topic": "The country where cash is almost completely dead",
+    "channel": "atlas",
+    "kind": "short"
+  },
+  {
+    "date": "2026-08-28",
+    "topic": "Why silence feels awkward after exactly 4 seconds",
+    "channel": "minds",
+    "kind": "short"
+  },
+  {
+    "date": "2026-08-28",
+    "topic": "The psychology of why we keep secrets",
+    "channel": "minds",
+    "kind": "short"
+  },
+  {
+    "date": "2026-08-28",
+    "topic": "Why most meteors never reach the ground",
+    "channel": "space",
+    "kind": "short"
+  },
+  {
+    "date": "2026-08-28",
+    "topic": "The planet that orbits two suns at once",
+    "channel": "space",
+    "kind": "short"
+  },
+  {
+    "date": "2026-08-28",
+    "topic": "Why hackers love your smart home",
+    "channel": "future",
+    "kind": "short"
+  },
+  {
+    "date": "2026-08-28",
+    "topic": "The AI that discovered new antibiotics",
+    "channel": "future",
+    "kind": "short"
   }
 ]
