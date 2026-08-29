@@ -814,5 +814,53 @@
     "topic": "The AI that discovered new antibiotics",
     "channel": "future",
     "kind": "short"
+  },
+  {
+    "date": "2026-08-29",
+    "topic": "Why countries on the equator tend to be poorer",
+    "channel": "atlas",
+    "kind": "short"
+  },
+  {
+    "date": "2026-08-29",
+    "topic": "The single train line that changed an entire continent",
+    "channel": "atlas",
+    "kind": "short"
+  },
+  {
+    "date": "2026-08-29",
+    "topic": "Why your brain insists the past was better",
+    "channel": "minds",
+    "kind": "short"
+  },
+  {
+    "date": "2026-08-29",
+    "topic": "The anchoring trick shops use on every price tag",
+    "channel": "minds",
+    "kind": "short"
+  },
+  {
+    "date": "2026-08-29",
+    "topic": "The average color of the universe is beige",
+    "channel": "space",
+    "kind": "short"
+  },
+  {
+    "date": "2026-08-29",
+    "topic": "There's a hole in the universe with nothing in it",
+    "channel": "space",
+    "kind": "short"
+  },
+  {
+    "date": "2026-08-29",
+    "topic": "Your data is worth $700 a year — here's who pays",
+    "channel": "future",
+    "kind": "short"
+  },
+  {
+    "date": "2026-08-29",
+    "topic": "Humanoid robots are entering factories right now",
+    "channel": "future",
+    "kind": "short"
   }
 ]
