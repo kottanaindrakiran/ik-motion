@@ -862,5 +862,53 @@
     "topic": "Humanoid robots are entering factories right now",
     "channel": "future",
     "kind": "short"
+  },
+  {
+    "date": "2026-08-30",
+    "topic": "Why Dubai built islands shaped like palm trees",
+    "channel": "atlas",
+    "kind": "short"
+  },
+  {
+    "date": "2026-08-30",
+    "topic": "The most isolated big city on the planet",
+    "channel": "atlas",
+    "kind": "short"
+  },
+  {
+    "date": "2026-08-30",
+    "topic": "Why laughing is scientifically contagious",
+    "channel": "minds",
+    "kind": "short"
+  },
+  {
+    "date": "2026-08-30",
+    "topic": "Why exams make you forget everything you studied",
+    "channel": "minds",
+    "kind": "short"
+  },
+  {
+    "date": "2026-08-30",
+    "topic": "Why GPS would fail without Einstein",
+    "channel": "space",
+    "kind": "short"
+  },
+  {
+    "date": "2026-08-30",
+    "topic": "The moon with lakes — but not of water",
+    "channel": "space",
+    "kind": "short"
+  },
+  {
+    "date": "2026-08-30",
+    "topic": "Why quantum computers will break every password",
+    "channel": "future",
+    "kind": "short"
+  },
+  {
+    "date": "2026-08-30",
+    "topic": "The app ban that changed the internet forever",
+    "channel": "future",
+    "kind": "short"
   }
 ]
