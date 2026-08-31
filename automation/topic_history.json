@@ -910,5 +910,77 @@
     "topic": "The app ban that changed the internet forever",
     "channel": "future",
     "kind": "short"
+  },
+  {
+    "date": "2026-08-31",
+    "topic": "How South Korea grew faster than any country in history",
+    "channel": "atlas",
+    "kind": "short"
+  },
+  {
+    "date": "2026-08-31",
+    "topic": "The river that five countries are fighting over",
+    "channel": "atlas",
+    "kind": "short"
+  },
+  {
+    "date": "2026-08-31",
+    "topic": "Why we secretly love watching people fail",
+    "channel": "minds",
+    "kind": "short"
+  },
+  {
+    "date": "2026-08-31",
+    "topic": "The IKEA effect — why you love what you build",
+    "channel": "minds",
+    "kind": "short"
+  },
+  {
+    "date": "2026-08-31",
+    "topic": "Why stars twinkle but planets don't",
+    "channel": "space",
+    "kind": "short"
+  },
+  {
+    "date": "2026-08-31",
+    "topic": "The exploding star people saw in daylight in 1054",
+    "channel": "space",
+    "kind": "short"
+  },
+  {
+    "date": "2026-08-31",
+    "topic": "How AI translation will end language barriers",
+    "channel": "future",
+    "kind": "short"
+  },
+  {
+    "date": "2026-08-31",
+    "topic": "The technology that can see through walls",
+    "channel": "future",
+    "kind": "short"
+  },
+  {
+    "date": "2026-08-31",
+    "topic": "Why Japan's population crisis will change everything",
+    "channel": "atlas",
+    "kind": "long"
+  },
+  {
+    "date": "2026-08-31",
+    "topic": "Why we believe lies — the psychology of misinformation",
+    "channel": "minds",
+    "kind": "long"
+  },
+  {
+    "date": "2026-08-31",
+    "topic": "Why we haven't found aliens — the Fermi paradox explained",
+    "channel": "space",
+    "kind": "long"
+  },
+  {
+    "date": "2026-08-31",
+    "topic": "The dark side of AI companions and chatbots",
+    "channel": "future",
+    "kind": "long"
   }
 ]
