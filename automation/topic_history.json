@@ -982,5 +982,53 @@
     "topic": "The dark side of AI companions and chatbots",
     "channel": "future",
     "kind": "long"
+  },
+  {
+    "date": "2026-09-01",
+    "topic": "Why Greenland is icy but Iceland is green",
+    "channel": "atlas",
+    "kind": "short"
+  },
+  {
+    "date": "2026-09-01",
+    "topic": "The country with the strangest shape in the world",
+    "channel": "atlas",
+    "kind": "short"
+  },
+  {
+    "date": "2026-09-01",
+    "topic": "Why time flies when you're having fun — the real science",
+    "channel": "minds",
+    "kind": "short"
+  },
+  {
+    "date": "2026-09-01",
+    "topic": "Why you can't ignore your own name across a room",
+    "channel": "minds",
+    "kind": "short"
+  },
+  {
+    "date": "2026-09-01",
+    "topic": "Black holes aren't actually holes",
+    "channel": "space",
+    "kind": "short"
+  },
+  {
+    "date": "2026-09-01",
+    "topic": "The asteroid worth more than the entire world economy",
+    "channel": "space",
+    "kind": "short"
+  },
+  {
+    "date": "2026-09-01",
+    "topic": "Why computer chips are the new oil",
+    "channel": "future",
+    "kind": "short"
+  },
+  {
+    "date": "2026-09-01",
+    "topic": "The AI that designs better AI than humans can",
+    "channel": "future",
+    "kind": "short"
   }
 ]
