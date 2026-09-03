@@ -1078,5 +1078,77 @@
     "topic": "Robot surgeons are operating on people today",
     "channel": "future",
     "kind": "short"
+  },
+  {
+    "date": "2026-09-03",
+    "topic": "Why all of China runs on one single time zone",
+    "channel": "atlas",
+    "kind": "short"
+  },
+  {
+    "date": "2026-09-03",
+    "topic": "The bridge that connects two continents",
+    "channel": "atlas",
+    "kind": "short"
+  },
+  {
+    "date": "2026-09-03",
+    "topic": "Why your brain fears public speaking more than death",
+    "channel": "minds",
+    "kind": "short"
+  },
+  {
+    "date": "2026-09-03",
+    "topic": "The halo effect — why attractive people seem smarter",
+    "channel": "minds",
+    "kind": "short"
+  },
+  {
+    "date": "2026-09-03",
+    "topic": "Why Mercury is NOT the hottest planet",
+    "channel": "space",
+    "kind": "short"
+  },
+  {
+    "date": "2026-09-03",
+    "topic": "It rains diamonds on Neptune",
+    "channel": "space",
+    "kind": "short"
+  },
+  {
+    "date": "2026-09-03",
+    "topic": "Why AI watermarks don't actually work",
+    "channel": "future",
+    "kind": "short"
+  },
+  {
+    "date": "2026-09-03",
+    "topic": "The end of passwords is finally here",
+    "channel": "future",
+    "kind": "short"
+  },
+  {
+    "date": "2026-09-03",
+    "topic": "How Dubai built a megacity in a desert — and what it really cost",
+    "channel": "atlas",
+    "kind": "long"
+  },
+  {
+    "date": "2026-09-03",
+    "topic": "How your childhood quietly shapes your money habits",
+    "channel": "minds",
+    "kind": "long"
+  },
+  {
+    "date": "2026-09-03",
+    "topic": "The death of the Sun — a timeline of the end of everything",
+    "channel": "space",
+    "kind": "long"
+  },
+  {
+    "date": "2026-09-03",
+    "topic": "Brain-computer interfaces — how close are we really?",
+    "channel": "future",
+    "kind": "long"
   }
 ]
