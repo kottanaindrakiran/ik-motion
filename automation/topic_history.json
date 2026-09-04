@@ -1150,5 +1150,53 @@
     "topic": "Brain-computer interfaces — how close are we really?",
     "channel": "future",
     "kind": "long"
+  },
+  {
+    "date": "2026-09-04",
+    "topic": "Why islands keep quietly disappearing from world maps",
+    "channel": "atlas",
+    "kind": "short"
+  },
+  {
+    "date": "2026-09-04",
+    "topic": "The city built in the middle of nowhere on purpose",
+    "channel": "atlas",
+    "kind": "short"
+  },
+  {
+    "date": "2026-09-04",
+    "topic": "How writing things down physically changes your brain",
+    "channel": "minds",
+    "kind": "short"
+  },
+  {
+    "date": "2026-09-04",
+    "topic": "Why children learn languages so much faster",
+    "channel": "minds",
+    "kind": "short"
+  },
+  {
+    "date": "2026-09-04",
+    "topic": "Why the space station falls forever and never lands",
+    "channel": "space",
+    "kind": "short"
+  },
+  {
+    "date": "2026-09-04",
+    "topic": "The star that is one giant diamond",
+    "channel": "space",
+    "kind": "short"
+  },
+  {
+    "date": "2026-09-04",
+    "topic": "Your old phone contains actual gold",
+    "channel": "future",
+    "kind": "short"
+  },
+  {
+    "date": "2026-09-04",
+    "topic": "The AI that predicts earthquakes",
+    "channel": "future",
+    "kind": "short"
   }
 ]
