@@ -1198,5 +1198,53 @@
     "topic": "The AI that predicts earthquakes",
     "channel": "future",
     "kind": "short"
+  },
+  {
+    "date": "2026-09-05",
+    "topic": "Why Antarctica belongs to nobody",
+    "channel": "atlas",
+    "kind": "short"
+  },
+  {
+    "date": "2026-09-05",
+    "topic": "The canal that cut world shipping time in half",
+    "channel": "atlas",
+    "kind": "short"
+  },
+  {
+    "date": "2026-09-05",
+    "topic": "Why you feel watched when nobody is there",
+    "channel": "minds",
+    "kind": "short"
+  },
+  {
+    "date": "2026-09-05",
+    "topic": "The sunk cost trap that keeps you stuck in everything",
+    "channel": "minds",
+    "kind": "short"
+  },
+  {
+    "date": "2026-09-05",
+    "topic": "How space junk could trap humanity on Earth",
+    "channel": "space",
+    "kind": "short"
+  },
+  {
+    "date": "2026-09-05",
+    "topic": "The volcano on Mars three times taller than Everest",
+    "channel": "space",
+    "kind": "short"
+  },
+  {
+    "date": "2026-09-05",
+    "topic": "Why big tech wants your health data so badly",
+    "channel": "future",
+    "kind": "short"
+  },
+  {
+    "date": "2026-09-05",
+    "topic": "Lab-grown organs are already saving lives",
+    "channel": "future",
+    "kind": "short"
   }
 ]
