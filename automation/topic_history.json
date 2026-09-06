@@ -1246,5 +1246,53 @@
     "topic": "Lab-grown organs are already saving lives",
     "channel": "future",
     "kind": "short"
+  },
+  {
+    "date": "2026-09-06",
+    "topic": "Why some countries drive on the left side",
+    "channel": "atlas",
+    "kind": "short"
+  },
+  {
+    "date": "2026-09-06",
+    "topic": "The mountain border that moves position every year",
+    "channel": "atlas",
+    "kind": "short"
+  },
+  {
+    "date": "2026-09-06",
+    "topic": "Why your brain loves round numbers",
+    "channel": "minds",
+    "kind": "short"
+  },
+  {
+    "date": "2026-09-06",
+    "topic": "Why nostalgia works like a painkiller",
+    "channel": "minds",
+    "kind": "short"
+  },
+  {
+    "date": "2026-09-06",
+    "topic": "The day the Sun will swallow Earth",
+    "channel": "space",
+    "kind": "short"
+  },
+  {
+    "date": "2026-09-06",
+    "topic": "Dark matter — the mystery in 60 seconds",
+    "channel": "space",
+    "kind": "short"
+  },
+  {
+    "date": "2026-09-06",
+    "topic": "The AI bubble — will it burst?",
+    "channel": "future",
+    "kind": "short"
+  },
+  {
+    "date": "2026-09-06",
+    "topic": "Satellites are photographing you right now",
+    "channel": "future",
+    "kind": "short"
   }
 ]
