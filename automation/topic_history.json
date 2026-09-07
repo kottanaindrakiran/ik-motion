@@ -1294,5 +1294,77 @@
     "topic": "Satellites are photographing you right now",
     "channel": "future",
     "kind": "short"
+  },
+  {
+    "date": "2026-09-07",
+    "topic": "Why most of the world's food comes from just five regions",
+    "channel": "atlas",
+    "kind": "short"
+  },
+  {
+    "date": "2026-09-07",
+    "topic": "The country that rents out its own army",
+    "channel": "atlas",
+    "kind": "short"
+  },
+  {
+    "date": "2026-09-07",
+    "topic": "Why groups make riskier decisions than individuals",
+    "channel": "minds",
+    "kind": "short"
+  },
+  {
+    "date": "2026-09-07",
+    "topic": "The spotlight effect — nobody notices your mistakes",
+    "channel": "minds",
+    "kind": "short"
+  },
+  {
+    "date": "2026-09-07",
+    "topic": "Why light takes 100,000 years to escape the Sun",
+    "channel": "space",
+    "kind": "short"
+  },
+  {
+    "date": "2026-09-07",
+    "topic": "The planet where a year lasts 8 hours",
+    "channel": "space",
+    "kind": "short"
+  },
+  {
+    "date": "2026-09-07",
+    "topic": "Why coding is becoming a spoken language",
+    "channel": "future",
+    "kind": "short"
+  },
+  {
+    "date": "2026-09-07",
+    "topic": "The machines sucking carbon straight from the sky",
+    "channel": "future",
+    "kind": "short"
+  },
+  {
+    "date": "2026-09-07",
+    "topic": "The geography that made America unstoppable",
+    "channel": "atlas",
+    "kind": "long"
+  },
+  {
+    "date": "2026-09-07",
+    "topic": "The dark psychology of cults — how normal people get recruited",
+    "channel": "minds",
+    "kind": "long"
+  },
+  {
+    "date": "2026-09-07",
+    "topic": "How rockets learned to land themselves",
+    "channel": "space",
+    "kind": "long"
+  },
+  {
+    "date": "2026-09-07",
+    "topic": "The complete story of the global chip war",
+    "channel": "future",
+    "kind": "long"
   }
 ]
