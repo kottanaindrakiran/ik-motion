@@ -1366,5 +1366,53 @@
     "topic": "The complete story of the global chip war",
     "channel": "future",
     "kind": "long"
+  },
+  {
+    "date": "2026-09-08",
+    "topic": "Why airports are turning into full cities",
+    "channel": "atlas",
+    "kind": "short"
+  },
+  {
+    "date": "2026-09-08",
+    "topic": "The one line on a map that split an entire people",
+    "channel": "atlas",
+    "kind": "short"
+  },
+  {
+    "date": "2026-09-08",
+    "topic": "Why rewards can actually kill motivation",
+    "channel": "minds",
+    "kind": "short"
+  },
+  {
+    "date": "2026-09-08",
+    "topic": "Why you can't remember being a baby",
+    "channel": "minds",
+    "kind": "short"
+  },
+  {
+    "date": "2026-09-08",
+    "topic": "Why astronauts can't cry in space",
+    "channel": "space",
+    "kind": "short"
+  },
+  {
+    "date": "2026-09-08",
+    "topic": "The invisible force dragging our entire galaxy",
+    "channel": "space",
+    "kind": "short"
+  },
+  {
+    "date": "2026-09-08",
+    "topic": "AI agents will soon browse the internet for you",
+    "channel": "future",
+    "kind": "short"
+  },
+  {
+    "date": "2026-09-08",
+    "topic": "The 6G race nobody is talking about",
+    "channel": "future",
+    "kind": "short"
   }
 ]
