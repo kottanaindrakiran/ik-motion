@@ -1414,5 +1414,53 @@
     "topic": "The 6G race nobody is talking about",
     "channel": "future",
     "kind": "short"
+  },
+  {
+    "date": "2026-09-09",
+    "topic": "Why water will decide the next hundred years",
+    "channel": "atlas",
+    "kind": "short"
+  },
+  {
+    "date": "2026-09-09",
+    "topic": "The smallest country with the biggest secrets",
+    "channel": "atlas",
+    "kind": "short"
+  },
+  {
+    "date": "2026-09-09",
+    "topic": "How cliffhangers hijack your brain chemistry",
+    "channel": "minds",
+    "kind": "short"
+  },
+  {
+    "date": "2026-09-09",
+    "topic": "The evolutionary reason we gossip",
+    "channel": "minds",
+    "kind": "short"
+  },
+  {
+    "date": "2026-09-09",
+    "topic": "The Big Bang was not an explosion",
+    "channel": "space",
+    "kind": "short"
+  },
+  {
+    "date": "2026-09-09",
+    "topic": "The moon most likely to have alien life",
+    "channel": "space",
+    "kind": "short"
+  },
+  {
+    "date": "2026-09-09",
+    "topic": "The plan to make robots pay taxes",
+    "channel": "future",
+    "kind": "short"
+  },
+  {
+    "date": "2026-09-09",
+    "topic": "The AI that aced the world's hardest exams",
+    "channel": "future",
+    "kind": "short"
   }
 ]
