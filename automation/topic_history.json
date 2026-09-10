@@ -1462,5 +1462,77 @@
     "topic": "The AI that aced the world's hardest exams",
     "channel": "future",
     "kind": "short"
+  },
+  {
+    "date": "2026-09-10",
+    "topic": "Why cities are racing to build underground",
+    "channel": "atlas",
+    "kind": "short"
+  },
+  {
+    "date": "2026-09-10",
+    "topic": "The single port that makes or breaks Asia",
+    "channel": "atlas",
+    "kind": "short"
+  },
+  {
+    "date": "2026-09-10",
+    "topic": "Why your brain shuts down mid-argument",
+    "channel": "minds",
+    "kind": "short"
+  },
+  {
+    "date": "2026-09-10",
+    "topic": "Why familiarity beats quality — the mere exposure effect",
+    "channel": "minds",
+    "kind": "short"
+  },
+  {
+    "date": "2026-09-10",
+    "topic": "Why rockets are 90% fuel",
+    "channel": "space",
+    "kind": "short"
+  },
+  {
+    "date": "2026-09-10",
+    "topic": "The star that will outlive the universe",
+    "channel": "space",
+    "kind": "short"
+  },
+  {
+    "date": "2026-09-10",
+    "topic": "Why screens might replace every window",
+    "channel": "future",
+    "kind": "short"
+  },
+  {
+    "date": "2026-09-10",
+    "topic": "Brain implants are restoring people's speech",
+    "channel": "future",
+    "kind": "short"
+  },
+  {
+    "date": "2026-09-10",
+    "topic": "Why the next world conflict will be fought over water",
+    "channel": "atlas",
+    "kind": "long"
+  },
+  {
+    "date": "2026-09-10",
+    "topic": "Memory explained — why you forget and how to stop it",
+    "channel": "minds",
+    "kind": "long"
+  },
+  {
+    "date": "2026-09-10",
+    "topic": "The scariest things in the universe, ranked",
+    "channel": "space",
+    "kind": "long"
+  },
+  {
+    "date": "2026-09-10",
+    "topic": "What happens when AI runs out of internet to learn from",
+    "channel": "future",
+    "kind": "long"
   }
 ]
