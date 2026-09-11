@@ -1534,5 +1534,53 @@
     "topic": "What happens when AI runs out of internet to learn from",
     "channel": "future",
     "kind": "long"
+  },
+  {
+    "date": "2026-09-11",
+    "topic": "Why nobody agrees how many countries exist",
+    "channel": "atlas",
+    "kind": "short"
+  },
+  {
+    "date": "2026-09-11",
+    "topic": "The desert that used to be an ocean floor",
+    "channel": "atlas",
+    "kind": "short"
+  },
+  {
+    "date": "2026-09-11",
+    "topic": "Why writing a to-do list feels as good as doing it",
+    "channel": "minds",
+    "kind": "short"
+  },
+  {
+    "date": "2026-09-11",
+    "topic": "Why stress makes food taste better",
+    "channel": "minds",
+    "kind": "short"
+  },
+  {
+    "date": "2026-09-11",
+    "topic": "Earth's core is as hot as the Sun's surface",
+    "channel": "space",
+    "kind": "short"
+  },
+  {
+    "date": "2026-09-11",
+    "topic": "The message we beamed to aliens in 1974",
+    "channel": "space",
+    "kind": "short"
+  },
+  {
+    "date": "2026-09-11",
+    "topic": "Why AI needs to learn how to forget",
+    "channel": "future",
+    "kind": "short"
+  },
+  {
+    "date": "2026-09-11",
+    "topic": "The fake reviews written entirely by machines",
+    "channel": "future",
+    "kind": "short"
   }
 ]
