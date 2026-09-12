@@ -1582,5 +1582,53 @@
     "topic": "The fake reviews written entirely by machines",
     "channel": "future",
     "kind": "short"
+  },
+  {
+    "date": "2026-09-12",
+    "topic": "Why Iceland runs almost entirely on volcanoes",
+    "channel": "atlas",
+    "kind": "short"
+  },
+  {
+    "date": "2026-09-12",
+    "topic": "The road you could drive from Norway to South Africa",
+    "channel": "atlas",
+    "kind": "short"
+  },
+  {
+    "date": "2026-09-12",
+    "topic": "How eye contact changes a conversation's chemistry",
+    "channel": "minds",
+    "kind": "short"
+  },
+  {
+    "date": "2026-09-12",
+    "topic": "The peak-end rule — how your brain scores every memory",
+    "channel": "minds",
+    "kind": "short"
+  },
+  {
+    "date": "2026-09-12",
+    "topic": "The universe is expanding faster every second",
+    "channel": "space",
+    "kind": "short"
+  },
+  {
+    "date": "2026-09-12",
+    "topic": "The last star will die in 120 trillion years",
+    "channel": "space",
+    "kind": "short"
+  },
+  {
+    "date": "2026-09-12",
+    "topic": "How solar became the cheapest energy in history",
+    "channel": "future",
+    "kind": "short"
+  },
+  {
+    "date": "2026-09-12",
+    "topic": "What comes after the smartphone",
+    "channel": "future",
+    "kind": "short"
   }
 ]
